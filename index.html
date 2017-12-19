@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Astro Weight Calculator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container-fluid" id="calculator-block">
+
+      <div class="row">
+        <div class="container-fluid">
+          <h5>ADD CUSTOM "PLANET"</h5>
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" id="custom-name" type="text" placeholder="Planet name" />
+        </div>
+        <div class="col-md-2">
+            <input class="form-control" id="custom-multiplier" placeholder="Multiplier [number]"/>
+        </div>
+        <div class="col-md-2">
+            <button class="btn-md btn" id="add-custom-button">ADD CUSTOM PLANET</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+            <h5 id="user-weight-label">YOUR WEIGHT</h5>
+            <input class="form-control" id="user-weight" type="text" placeholder="Weight [lbs]" />
+        </div>
+        <div class="col-md-2">
+            <h5 id="planet-selection-label">SELECT A PLANET</h5>
+            <select class="form-control" id="planets"></select>
+        </div>
+        <div class="col-md-2">
+          <p>.</p>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" id="pluto-checkbox" checked="checked">
+              Include Pluto?
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-2">
+          <p>.</p>
+          <button class="btn-lg btn-primary" id="calculate-button">CALCULATE</button>
+        </div>
+        <div class="col-md-6">
+          <h5 id="output-label">OUTPUT</h5>
+          <div class="well" id="output-block">
+            <p id="output"></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
